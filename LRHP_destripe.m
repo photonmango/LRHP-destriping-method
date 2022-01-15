@@ -15,12 +15,12 @@ MaxIter = param.MaxIter;
 MaxPixVal = max(max(max(Y)));
 Y = Y./MaxPixVal;
 
-%%%guided profile Ïà¹Ø²ÎÊı
-% direction=1;    %Ê¹ÓÃÓÚM3ËùÒÔdirectionÎª1
+%%%guided profile ç›¸å…³å‚æ•°
+% direction=1;    %ä½¿ç”¨äºM3æ‰€ä»¥directionä¸º1
 g_Y=zeros(M,1,B);
 
 %%% Initialization for variables
-H=reshape(Y,M*N,B); %%%Ô­Ê¼Ó°ÏñµÄ¶şÎ¬×ÖµäÕ¹¿ª
+H=reshape(Y,M*N,B); %%%åŸå§‹å½±åƒçš„äºŒç»´å­—å…¸å±•å¼€
 X=Y;
 S=zeros(M,N,B);
 
@@ -83,7 +83,7 @@ end
 toc
 disp(['total time: ',num2str(toc)]);
 
-clean_HSI=X.*MaxVal;
+clean_HSI=X.*MaxPixVal;
 
 
 
